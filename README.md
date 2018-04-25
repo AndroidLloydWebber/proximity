@@ -1,5 +1,3 @@
-# bookish-octo-fortnight
-
 ## Project Title
 Project Alien
  
@@ -9,7 +7,9 @@ Justin Rogers, Victor Hernandez, Mark Groves, TK Diallo
 ## Project Description
 User submitted data centered around current events and news. Google map markers then geolocate submissions from address input to display on map in UI. Users connect to information by clicking on map markers for more details. 
  
-
+## Sketch of Final Product
+See attached photo
+ 
 ## APIs to be used
 	# For Core Functionality
 	1. Google Maps - Markers highlight event locations  
@@ -18,17 +18,16 @@ User submitted data centered around current events and news. Google map markers 
 	1. Express Web Server 
 	2. Mysql Database with Sequelize ORM	
 ## New Technology
-Backbone JS
+1. Backbone JS
 
-## Dataset
-	1. Community data (enhancement)
+## Datasets 
+	1. Community Data(enhancement) https://www.kaggle.com/census/2015-american-community-survey
 
 ## UI Framework
-	## UI Framework
-	a. ![](https://files.slack.com/files-pri/T94U4GGPK-FAD16CSUC/personaleventpage.png)
+	
+<img width="1092" alt="homepage" src="https://user-images.githubusercontent.com/13412644/39272870-3ae3a27a-48ab-11e8-970f-444a4c857847.png">
 
-	b. ![](https://files.slack.com/files-pri/T94U4GGPK-FAE9AS4EB/homepage.png)
-
+<img width="1088" alt="personaleventpage" src="https://user-images.githubusercontent.com/13412644/39272898-4e395680-48ab-11e8-99a9-842e757d5f06.png">
 
 ## Team Responsibilities 
 
@@ -54,4 +53,5 @@ Wednesday - Present Project
 	8. API routes
 	9. MVC Paradigm folder structure
 	10. New Technology
+
 
