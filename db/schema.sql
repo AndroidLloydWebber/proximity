@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS proximity;
+
+CREATE DATABASE proximity;
