@@ -6,7 +6,7 @@ module.exports = function (sequelize, DataTypes) {
         lng: DataTypes.DECIMAL(9,6),
         link: DataTypes.STRING,
         category: DataTypes.STRING,
-        body: DataType.TEXT
+        body: DataTypes.TEXT
     });
     return POI;
 };
