@@ -18,5 +18,18 @@ body, html {
 /* header */
 
 #logo {
-    height: 100px;
+    height: 120px;
+}
+
+nav {
+    background-color: #dbd7de;
+    height: 120px !important;
+}
+
+.header {
+
+}
+
+.nav-wrapper li a{
+    color: #5e0992 !important;
 }
