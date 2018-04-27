@@ -22,14 +22,14 @@ body, html {
 }
 
 nav {
-    background-color: #dbd7de;
-    height: 120px !important;
+    background-color:#30034c;
+    height: 70px !important;
 }
 
 .header {
 
 }
 
-.nav-wrapper li a{
-    color: #5e0992 !important;
-}
+/* .nav-wrapper li a{
+    color: #be57ff !important;
+} */
