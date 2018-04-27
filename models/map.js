@@ -38,14 +38,13 @@ function initMap() {
     }
 }
 
-function onClick(pos) {
-    $(".buttons").on("click", function () {
-        console.log("Button clicked");
-        let sportName = $(this).attr("data-name");
-        console.log("sportName: ", sportName);
-        // console.log("This: ", $(this));
+        function geocoder(){
+            var address = "955 Juniper St, Atlanta, GA, 30309";
+            var key = "AIzaSyAo3U3-CYQSA_L--3jjHzIIqBnngBiAMEU"
+            var queryURL = "https://maps.googleapis.com/maps/api/geocode/json?address=1" + address + "&key=" + key;
+
         $.ajax({
-            url: constructURL(sportName, pos),
+            url: queryURL,
             method: "GET",
         }).then(function (res) {
             let events = res.events.map(function(event) {
@@ -55,10 +54,11 @@ function onClick(pos) {
                     animation: google.maps.Animation.DROP,
                     map: map,
                     href: event.link,
-                    position: { lat: event.group.lat, lng: event.group.lon }
+                    position: { lat: event.group.lat, lng: event.group.lng }
                 };
             })
-
+        })
+    };
 
             let newMarkers = events.map(element => {
 
@@ -69,14 +69,14 @@ function onClick(pos) {
                 google.maps.event.addListener(m, 'click', function () {
                     window.location.href = this.href;
                 });
-            })
+            
 
             markers = markers.concat(newMarkers);
-        })
+    
+            });
 
+    
 
-    });
-}
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
@@ -86,6 +86,6 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.open(map);
 }
 
-function constructURL(sport, lat, lon) {
-    return qURL = "https://cors-anywhere.herokuapp.com/https://api.meetup.com/find/upcoming_events?&key=34305b6a752276562604f306a51d76&sign=true&photo-host=public&page=10&text=" + sport + "&lat=" + pos.lat + "&lon=" + pos.lng
+function constructURL( pos, geometry, location, lat, lon) {
+    return qURL = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/geocode/json?address=1" + address + "&key=" + pos + geometry.location.lat + geometry.location.lng
 };
