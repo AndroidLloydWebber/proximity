@@ -18,18 +18,19 @@ body, html {
 /* header */
 
 #logo {
-    height: 120px;
+
+    height: 100px;
 }
 
 nav {
-    background-color:#30034c;
-    height: 70px !important;
-}
-
-.header {
+    background-color: white;
 
 }
 
-/* .nav-wrapper li a{
-    color: #be57ff !important;
-} */
+nav ul a {
+    color: black;
+}
+
+nav a.sidenav-trigger {
+    display: block;
+}
