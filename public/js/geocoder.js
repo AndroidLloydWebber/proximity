@@ -7,7 +7,8 @@ $.ajax({
     url: queryURL,
     method: "GET"
 }).then(function(response){
-    console.log(response.geometry.location.lat);
-    console.log(response.geometry.location.lng);
+    console.log(response)
+    // console.log(response.geometry.location.lat);
+    // console.log(response.geometry.location.lng);
 })
 // }
