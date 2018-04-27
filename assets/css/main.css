@@ -20,3 +20,16 @@ body, html {
 #logo {
     height: 100px;
 }
+
+nav {
+    background-color: white;
+
+}
+
+nav ul a {
+    color: black;
+}
+
+nav a.sidenav-trigger {
+    display: block;
+}
