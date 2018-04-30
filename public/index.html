@@ -16,73 +16,118 @@
 </head>
 
 <!-- nav bar -->
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo center">
-        <img id="logo" src="assets/images/Proximity-bold.png" alt="brand-logo">
-      </a>
-      <ul id="nav-mobile" class="left">
-        <li>
-          <a id="slide-out-menu-btn" href="#" data-target="slide-out" class="sidenav-trigger">
-            <button style="background-color: #30034c;" class="btn">Create Event</button>
-          </a>
-        </li>
-        <li>
-          <a id="slide-out-menu-btn" href="#" data-target="slide-out" class="sidenav-trigger search">
-            <button style="background-color: #30034c;" class="btn">Search Events</button>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <ul id="slide-out" class="sidenav" style="width: 500px;">
-    <form action="page where info will be submitted" id="form">
-      <div class="row">
-        <div class="col-xs-12">
-          <div id="form-header">
-            <h4>Create an Event</h4>
-          </div>
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo center">
+      <img id="logo" src="assets/images/Proximity-bold.png" alt="brand-logo">
+    </a>
+    <ul id="nav-mobile" class="left">
+      <li>
+        <a id="slide-out-menu-btn" href="#" data-target="slide-out" class="sidenav-trigger">
+          <button style="background-color: #30034c;" class="btn">Create Event</button>
+        </a>
+      </li>
+      <li>
+        <a id="slide-out-menu-btn" href="#" data-target="slide-out-events" class="sidenav-trigger search-btn">
+          <button style="background-color: #30034c; position: absolute; right: 0px;margin-top: 13px;
+            margin-right: 20px;" class="btn search-btn">Search Events</button>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- create event slide out form -->
+<ul id="slide-out" class="sidenav" style="width: 500px;">
+  <form action="page where info will be submitted" id="form">
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="form-header">
+          <h4>Create an Event</h4>
+        </div>
 
-          <!-- form -->
-          <!-- select box -->
-          <div class="input-field col s12">
-            <select>
-              <option value="" disabled selected>Choose your catagory</option>
-              <option value="1">Outdoor Activities</option>
-              <option value="2">Play Dates For Kids</option>
-              <option value="3">Study Groups</option>
-              <option value="4">Arts and Crafts</option>
-              <option value="5">Sports</option>
-              <option value="6">Night Life</option>
-              <option value="7">Business Promotion</option>
-              <option value="8">Garage Sales</option>
-              <option value="9">Music/Concerts</option>
-              <option value="10">Spiritual Groups</option>
-            </select>
-          </div>
-          <!-- event title -->
-          <div class="input-field col s12">
-            <input id="input_text" type="text" data-length="20">
-            <label for="input_text">Event Title</label>
-          </div>
-          <!-- event address -->
-          <div class="input-field col s12">
-            <input id="input_text" type="text">
-            <label for="input_text">Event Address</label>
-          </div>
-          <!-- describe event text area -->
-          <div class="input-field col s12">
-            <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
-            <label for="textarea2">Event Description</label>
-          </div>
+        <!-- form -->
+        <!-- select box -->
+        <div class="input-field col s12">
+          <select>
+              <option value="" disabled selected>Filter Results</option>
+              <option value="outdoor">Outdoor Activities</option>
+              <option value="play">Play Dates For Kids</option>
+              <option value="study">Study Groups</option>
+              <option value="arts">Arts and Crafts</option>
+              <option value="sports">Sports</option>
+              <option value="night">Night Life</option>
+              <option value="business">Business Promotion</option>
+              <option value="garage">Garage Sales</option>
+              <option value="music">Music/Concerts</option>
+              <option value="spiritual">Spiritual Groups</option>
+          </select>
+        </div>
+        <!-- event title -->
+        <div class="input-field col s12">
+          <input id="input_text" type="text" data-length="20">
+          <label for="input_text">Event Title</label>
+        </div>
+        <!-- event address -->
+        <div class="input-field col s12">
+          <input id="input_text" type="text">
+          <label for="input_text">Event Address</label>
+        </div>
+        <!-- describe event text area -->
+        <div class="input-field col s12">
+          <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
+          <label for="textarea2">Event Description</label>
         </div>
       </div>
-      <!-- submit button -->
-      <button class="btn waves-effect waves-light" type="submit" name="action">Add Event to Map
-        <i class="material-icons right">pin_drop</i>
-      </button>
-    </form>
-  </ul>
+    </div>
+    <!-- submit button -->
+    <button class="btn waves-effect waves-light" type="submit" name="action">Add Event to Map
+      <i class="material-icons right">place</i>
+    </button>
+  </form>
+</ul>
+
+<!-- _______________________________________________________________________________________________ -->
+
+<!-- search events fillout form -->
+
+<ul id="slide-out-events" class="sidenav right" style="width: 500px;">
+  <form action="page where info will be submitted" id="form">
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="form-header">
+          <h4>Search Events</h4>
+        </div>
+
+        <!-- form -->
+        <!-- select box -->
+        <div class="input-field col s12">
+          <select multiple>
+            <option value="" disabled selected>Filter Results</option>
+            <option value="outdoor">Outdoor Activities</option>
+            <option value="play">Play Dates For Kids</option>
+            <option value="study">Study Groups</option>
+            <option value="arts">Arts and Crafts</option>
+            <option value="sports">Sports</option>
+            <option value="night">Night Life</option>
+            <option value="business">Business Promotion</option>
+            <option value="garage">Garage Sales</option>
+            <option value="music">Music/Concerts</option>
+            <option value="spiritual">Spiritual Groups</option>
+          </select>
+        </div>
+        <!-- event title -->
+        <div class="input-field col s12">
+          <input id="input_text" type="text" data-length="20">
+          <label for="input_text">Zipcode</label>
+        </div>
+      </div>
+    </div>
+    <!-- submit button -->
+    <button class="btn waves-effect waves-light" type="submit" name="action">Search Events
+      <i class="material-icons right">search</i>
+    </button>
+  </form>
+</ul>
 
 
 
@@ -102,11 +147,13 @@
   <script>
     $(document).ready(function () {
       $('.sidenav').sidenav();
-      $('select').formSelect();
+      $('#slide-out-events').sidenav({
+        edge: 'right'})
+      $('select').formSelect({
+
+      });
       $('input#input_text, textarea#textarea2').characterCounter();
     });
-
-
   </script>
 </body>
 

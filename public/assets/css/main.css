@@ -47,11 +47,21 @@ nav a.sidenav-trigger {
 
 button:hover {
     background-color: #30034c !important;
-    -moz-box-shadow:    inset 0 0 15px white;
-    -webkit-box-shadow: inset 0 0 15px white;
-     box-shadow:        inset 0 0 15px white;
+    -moz-box-shadow:    outset 0 0 15px white;
+    -webkit-box-shadow: outset 0 0 15px white;
+     box-shadow:        outset 0 0 15px white;
     font-size: 22px;
     margin-left: -3px;
+    
+}
+
+button.btn.search-btn:hover {
+    background-color: #30034c !important;
+    -moz-box-shadow:    outset 0 0 15px white;
+    -webkit-box-shadow: outset 0 0 15px white;
+     box-shadow:        outset 0 0 15px white;
+    font-size: 22px;
+    margin-right: 15px !important;
     
 }
 
@@ -71,6 +81,12 @@ button:hover {
 label {
     color: #30034c !important;
     padding-left: 15px;
+}
+
+label.active {
+    color: #fff !important;
+    font-size: 20px !important;
+    line-height: 10px !important;
 }
 
 #form-header {
@@ -107,12 +123,14 @@ input {
 }
 
 #input_text {
+    color: #30034c !important;
     border-bottom: 1px solid #ffffff;
     background-color: #fff;
     /* border-radius: 5px; */
 }
 
 #textarea2 {
+    color: #30034c !important;
     background-color: #fff;
     border-bottom: 1px solid #ffffff;
     height: 150px;
@@ -145,7 +163,9 @@ h4 {
     padding-bottom: 18px;
 }
 
+#search-btn {
 
+}
 
 
 
