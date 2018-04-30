@@ -18,19 +18,134 @@ body, html {
 /* header */
 
 #logo {
-
     height: 100px;
+    margin-top: 8px;
 }
 
 nav {
-    background-color: white;
-
-}
-
-nav ul a {
-    color: black;
+    background-color:#30034c;
+    height: 70px !important;
 }
 
 nav a.sidenav-trigger {
-    display: block;
+    display: contents;
+ }
+
+#nav-mobile {
+    margin-left: 20px;
 }
+
+.btn {
+    background-color: #30034c;
+    border: 2px solid #fff;
+    border-radius: 100px;
+    margin: 10px 13px 10px 0;
+    height: auto;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #30034c !important;
+    -moz-box-shadow:    inset 0 0 15px white;
+    -webkit-box-shadow: inset 0 0 15px white;
+     box-shadow:        inset 0 0 15px white;
+    font-size: 15px;
+    margin-left: -3px;
+    
+}
+
+.btn:hover {
+    -moz-box-shadow:     0 0 15px white;
+    -webkit-box-shadow:  0 0 15px white;
+     box-shadow:         0 0 15px white;
+}
+
+.sidenav {
+    /* width: 470px !important; */
+    background-color: #30034c;
+    
+    
+}
+
+label {
+    color: #30034c !important;
+    padding-left: 15px;
+}
+
+#form-header {
+    color: #fff !important;
+}
+
+span {
+    color: #30034c !important;
+}
+
+input {
+    color: #fff !important;
+    border-bottom: 1px solid #ffffff;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.select-wrapper input.select-dropdown:focus {
+    border-bottom: 1px solid #ffffff;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.select-wrapper {
+    padding-left: 10px;
+    background-color: #fff;
+    color: #30034c !important;
+    border-radius: 5px;
+}
+
+.select-wrapper input.select-dropdown {
+    color: #30034c !important;
+    margin-bottom: 28px;
+}
+
+#input_text {
+    border-bottom: 1px solid #ffffff;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#textarea2 {
+    background-color: #fff;
+    border-bottom: 1px solid #ffffff;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.row {
+    height: 500px;
+}
+
+.waves-effect  {
+    /* margin-left: 10px; */
+    width: 90%;
+    margin-left: 22px;
+    /* margin-right: auto; */
+    text-align: center;
+
+}
+
+.waves-effect:hover {
+    /* margin-left: 10px; */
+    margin-left: 22px;
+    /* margin-right: auto; */
+    text-align: center;
+}
+
+h4 {
+    margin-left: 10px;
+    font-weight: bolder;
+    padding-bottom: 18px;
+}
+
+
+
+
+
+

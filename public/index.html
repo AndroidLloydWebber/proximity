@@ -15,61 +15,72 @@
   <title>Proximity</title>
 </head>
 
-
 <!-- nav bar -->
-<header>
   <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo center">
-        <img id="logo" src="assets/images/Proximity_1.png" alt="brand-logo">
+        <img id="logo" src="assets/images/Proximity-bold.png" alt="brand-logo">
       </a>
       <ul id="nav-mobile" class="left">
         <li>
-            <a id="slide-out-menu-btn"href="#" data-target="slide-out" class="sidenav-trigger">
-              <button style="background-color: purple;" class="btn">Create Event</button>
-            </a>
+          <a id="slide-out-menu-btn" href="#" data-target="slide-out" class="sidenav-trigger">
+            <button style="background-color: #30034c;" class="btn">Create Event</button>
+          </a>
         </li>
       </ul>
     </div>
   </nav>
-  <ul id="slide-out" class="sidenav">
-    <li>
-      <div class="user-view">
-        <div class="background">
-          <img src="images/office.jpg">
+  <ul id="slide-out" class="sidenav" style="width: 500px;">
+    <form action="page where info will be submitted" id="form">
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="form-header">
+            <h4>Create an Event</h4>
+          </div>
 
+          <!-- form -->
+          <!-- select box -->
+          <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected>Choose your catagory</option>
+              <option value="1">Outdoor Activities</option>
+              <option value="2">Play Dates For Kids</option>
+              <option value="3">Study Groups</option>
+              <option value="4">Arts and Crafts</option>
+              <option value="5">Sports</option>
+              <option value="6">Night Life</option>
+              <option value="7">Business Promotion</option>
+              <option value="8">Garage Sales</option>
+              <option value="9">Music/Concerts</option>
+              <option value="10">Spiritual Groups</option>
+            </select>
+          </div>
+          <!-- event title -->
+          <div class="input-field col s12">
+            <input id="input_text" type="text" data-length="20">
+            <label for="input_text">Event Title</label>
+          </div>
+          <!-- event address -->
+          <div class="input-field col s12">
+            <input id="input_text" type="text">
+            <label for="input_text">Event Address</label>
+          </div>
+          <!-- describe event text area -->
+          <div class="input-field col s12">
+            <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
+            <label for="textarea2">Event Description</label>
+          </div>
         </div>
-        <a href="#user">
-          <img class="circle" src="images/yuna.jpg">
-        </a>
-        <a href="#name">
-          <span class="white-text name">John Doe</span>
-        </a>
-        <a href="#email">
-          <span class="white-text email">jdandturk@gmail.com</span>
-        </a>
       </div>
-    </li>
-    <li>
-      <a href="#!">
-        <i class="material-icons">cloud</i>First Link With Icon</a>
-    </li>
-    <li>
-      <a href="#!">Second Link</a>
-    </li>
-    <li>
-      <div class="divider"></div>
-    </li>
-    <li>
-      <a class="subheader">Subheader</a>
-    </li>
-    <li>
-      <a class="waves-effect" href="#!">Third Link With Waves</a>
-    </li>
+      <!-- submit button -->
+      <button class="btn waves-effect waves-light" type="submit" name="action">Add Event to Map
+        <i class="material-icons right">pin_drop</i>
+      </button>
+    </form>
   </ul>
 
 
-</header>
+
 
 <body class="bg">
   <div class="container">
@@ -78,14 +89,6 @@
         <div id="google-maps">
 
         </div>
-<<<<<<< HEAD:public/index.html
-      <!--JavaScript at end of body for optimized loading-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-      <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-      <script src="./js/geocoder.js"></script>
-    </body>
-  </html>
-=======
       </div>
     </div>
   </div>
@@ -94,9 +97,12 @@
   <script>
     $(document).ready(function () {
       $('.sidenav').sidenav();
+      $('select').formSelect();
+      $('input#input_text, textarea#textarea2').characterCounter();
     });
+
+
   </script>
 </body>
->>>>>>> 54d9b0f03f131f6993d820a570a15293a757aec2:index.html
 
 </html>
