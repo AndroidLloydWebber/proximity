@@ -7,8 +7,20 @@ $.ajax({
     url: queryURL,
     method: "GET"
 }).then(function(response){
-    console.log(response)
-    // console.log(response.geometry.location.lat);
-    // console.log(response.geometry.location.lng);
+    db.POI.create({
+        title: "form title field",
+        address: "form address field",
+        lat: response.results["0"].geometry.location.lat,
+        lng: response.results["0"].geometry.location.lng,
+        link: "form link field",
+        category: "form category field",
+        body: "form body field"
+    }).then(function(dbPOI){
+        res.json(dbPOI);
+    })
+    
+    console.log(response.results["0"].geometry.location.lat)
+    console.log(response.results["0"].geometry.location.lng)
+
 })
 // }
