@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "crazy8ball",
+    "password": "",
     "database": "proximity",
     "host": "127.0.0.1",
     "dialect": "mysql"
