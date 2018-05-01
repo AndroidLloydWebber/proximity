@@ -5,7 +5,7 @@ Project Proximity
 Justin Rogers, Victor Hernandez, Mark Groves, TK Diallo
  
 ## Project Description
-User submitted data centered around current events and news. Google map markers then geolocate submissions from address input to display on map in UI. Users connect to information by clicking on map markers for more details. 
+Proximity is a free website with user generated events populated all over the world. Users can also search for events near them based on zip code, and our categories.
  
 ## Sketch of Final Product
 See attached photo
@@ -36,25 +36,28 @@ See attached photo
 
 Frontend (Mark, Victor)
 Backend (JR, TK, Mark, Victor)
-## Deadlines
-Thursday - Detail Outline and sectioning of responsibilities 
-Complete frontend, create database, schema, seeds and MVC structure. Design needed tables and establish routes and server.
-Friday - Complete backend; connect databases, backend and frontend
-Monday - Deployment of site, add enhancements and start on presentation
-Tuesday  - Complete presentation and preparation
-Wednesday - Present Project
+## Concept
+User arrives on website
+
+User will see one big map, with already created events by other users
+
+User can create their own events, and add them to the map
+
+User can search for already created events, and get more info on them upon clicking them
+
 
  
-## Rough Breakdown of Tasks
-	1. HTML
-	2. CSS & Style Guide
-	3. JavaScript
-	4. API
-	5. Integration
-	6. Deployment
-	7. Demo/Presentation Preparation
-	8. API routes
-	9. MVC Paradigm folder structure
-	10. New Technology
+## Rough Breakdown of Process
+Brainstormed concepts we wanted to incorporate (create event, search event)
+
+Sketched out UI/UX designs
+
+Determined APIs that would allow us to achieve concept aspirations
+
+Acquired the necessary data from our APIs
+
+Styled, formatted, and “beautified”
+
+
 
 
