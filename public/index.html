@@ -13,148 +13,213 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Proximity</title>
+
+<meta name="viewport"/>
+<style type="text/css">
+html, body, #googft-mapCanvas {
+  /* height: 300px; */
+  margin: 0;
+  padding: 0;
+  /* width: 500px; */
+}
+</style>
+
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3"></script>
+
+<script type="text/javascript">
+  function initialize() {
+    var isMobile = (navigator.userAgent.toLowerCase().indexOf('android') > -1) ||
+      (navigator.userAgent.match(/(iPod|iPhone|iPad|BlackBerry|Windows Phone|iemobile)/));
+    if (isMobile) {
+      var viewport = document.querySelector("meta[name=viewport]");
+      viewport.setAttribute('content', 'initial-scale=1.0, user-scalable=no');
+    }
+    var mapDiv = document.getElementById('googft-mapCanvas');
+    mapDiv.style.width = isMobile ? '100%' : '1679px';
+    mapDiv.style.height = isMobile ? '100%' : '830px';
+    var map = new google.maps.Map(mapDiv, {
+      center: new google.maps.LatLng(19.396152925554084, -167.30385114999996),
+      zoom: 2,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    layer = new google.maps.FusionTablesLayer({
+      map: map,
+      heatmap: { enabled: false },
+      query: {
+        select: "col12",
+        from: "1yzES6DPKVDD08kJLB0TIlzaElQHYJztxsg959US0",
+        where: ""
+      },
+      options: {
+        styleId: 2,
+        templateId: 3
+      }
+    });
+
+    if (isMobile) {
+      var legend = document.getElementById('googft-legend');
+      var legendOpenButton = document.getElementById('googft-legend-open');
+      var legendCloseButton = document.getElementById('googft-legend-close');
+      legend.style.display = 'none';
+      legendOpenButton.style.display = 'block';
+      legendCloseButton.style.display = 'block';
+      legendOpenButton.onclick = function() {
+        legend.style.display = 'block';
+        legendOpenButton.style.display = 'none';
+      }
+      legendCloseButton.onclick = function() {
+        legend.style.display = 'none';
+        legendOpenButton.style.display = 'block';
+      }
+    }
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 </head>
+
+
+  <!-- <div id="googft-mapCanvas"></div> -->
 
 <!-- nav bar -->
 <nav>
-  <div class="nav-wrapper">
-    <a href="#" class="brand-logo center">
-      <img id="logo" src="assets/images/Proximity-bold.png" alt="brand-logo">
-    </a>
-    <ul id="nav-mobile" class="left">
-      <li>
-        <a id="slide-out-menu-btn" href="#" data-target="slide-out" class="sidenav-trigger">
-          <button style="background-color: #30034c;" class="btn">Create Event</button>
-        </a>
-      </li>
-      <li>
-        <a id="slide-out-menu-btn" href="#" data-target="slide-out-events" class="sidenav-trigger search-btn">
-          <button style="background-color: #30034c; position: absolute; right: 0px;margin-top: 13px;
-            margin-right: 20px;" class="btn search-btn">Search Events</button>
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<!-- create event slide out form -->
-<ul id="slide-out" class="sidenav" style="width: 500px;">
-  <form action="page where info will be submitted" id="form">
-    <div class="row">
-      <div class="col-xs-12">
-        <div id="form-header">
-          <h4>Create an Event</h4>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">
+        <img id="logo" src="assets/images/Proximity-bold.png" alt="brand-logo">
+      </a>
+      <ul id="nav-mobile" class="left">
+        <li>
+          <a id="slide-out-menu-btn" href="#" data-target="slide-out" class="sidenav-trigger">
+            <button style="background-color: #30034c;" class="btn">Create Event</button>
+          </a>
+        </li>
+        <li>
+          <a id="slide-out-menu-btn" href="#" data-target="slide-out-events" class="sidenav-trigger search-btn">
+            <button style="background-color: #30034c; position: absolute; right: 0px;margin-top: 13px;
+              margin-right: 20px;" class="btn search-btn">Search Events</button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- create event slide out form -->
+  <ul id="slide-out" class="sidenav" style="width: 500px;">
+    <form action="page where info will be submitted" id="form">
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="form-header">
+            <h4>Create an Event</h4>
+          </div>
+  
+          <!-- form -->
+          <!-- select box -->
+          <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected>Choose your catagory</option>
+              <option value="1">Outdoor Activities</option>
+              <option value="2">Play Dates For Kids</option>
+              <option value="3">Study Groups</option>
+              <option value="4">Arts and Crafts</option>
+              <option value="5">Sports</option>
+              <option value="6">Night Life</option>
+              <option value="7">Business Promotion</option>
+              <option value="8">Garage Sales</option>
+              <option value="9">Music/Concerts</option>
+              <option value="10">Spiritual Groups</option>
+            </select>
+          </div>
+          <!-- event title -->
+          <div class="input-field col s12">
+            <input id="input_text" type="text" data-length="20">
+            <label for="input_text">Event Title</label>
+          </div>
+          <!-- event address -->
+          <div class="input-field col s12">
+            <input id="input_text" type="text">
+            <label for="input_text">Event Address</label>
+          </div>
+          <!-- describe event text area -->
+          <div class="input-field col s12">
+            <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
+            <label for="textarea2">Event Description</label>
+          </div>
         </div>
-
-        <!-- form -->
-        <!-- select box -->
-        <div class="input-field col s12">
-          <select>
+      </div>
+      <!-- submit button -->
+      <button class="btn waves-effect waves-light" type="submit" name="action">Add Event to Map
+        <i class="material-icons right">place</i>
+      </button>
+    </form>
+  </ul>
+  
+  <!-- _______________________________________________________________________________________________ -->
+  
+  <!-- search events fillout form -->
+  
+  <ul id="slide-out-events" class="sidenav right" style="width: 500px;">
+    <form action="page where info will be submitted" id="form">
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="form-header">
+            <h4>Search Events</h4>
+          </div>
+  
+          <!-- form -->
+          <!-- select box -->
+          <div class="input-field col s12">
+            <select multiple>
               <option value="" disabled selected>Filter Results</option>
-              <option value="outdoor">Outdoor Activities</option>
-              <option value="play">Play Dates For Kids</option>
-              <option value="study">Study Groups</option>
-              <option value="arts">Arts and Crafts</option>
-              <option value="sports">Sports</option>
-              <option value="night">Night Life</option>
-              <option value="business">Business Promotion</option>
-              <option value="garage">Garage Sales</option>
-              <option value="music">Music/Concerts</option>
-              <option value="spiritual">Spiritual Groups</option>
-          </select>
-        </div>
-        <!-- event title -->
-        <div class="input-field col s12">
-          <input id="input_text" type="text" data-length="20">
-          <label for="input_text">Event Title</label>
-        </div>
-        <!-- event address -->
-        <div class="input-field col s12">
-          <input id="input_text" type="text">
-          <label for="input_text">Event Address</label>
-        </div>
-        <!-- describe event text area -->
-        <div class="input-field col s12">
-          <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
-          <label for="textarea2">Event Description</label>
+              <option value="1">Outdoor Activities</option>
+              <option value="2">Play Dates For Kids</option>
+              <option value="3">Study Groups</option>
+              <option value="4">Arts and Crafts</option>
+              <option value="5">Sports</option>
+              <option value="6">Night Life</option>
+              <option value="7">Business Promotion</option>
+              <option value="8">Garage Sales</option>
+              <option value="9">Music/Concerts</option>
+              <option value="10">Spiritual Groups</option>
+            </select>
+          </div>
+          <!-- event title -->
+          <div class="input-field col s12">
+            <input id="input_text" type="text" data-length="20">
+            <label for="input_text">Zipcode</label>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- submit button -->
-    <button class="btn waves-effect waves-light" type="submit" name="action">Add Event to Map
-      <i class="material-icons right">place</i>
-    </button>
-  </form>
-</ul>
-
-<!-- _______________________________________________________________________________________________ -->
-
-<!-- search events fillout form -->
-
-<ul id="slide-out-events" class="sidenav right" style="width: 500px;">
-  <form action="page where info will be submitted" id="form">
-    <div class="row">
-      <div class="col-xs-12">
-        <div id="form-header">
-          <h4>Search Events</h4>
-        </div>
-
-        <!-- form -->
-        <!-- select box -->
-        <div class="input-field col s12">
-          <select multiple>
-            <option value="" disabled selected>Filter Results</option>
-            <option value="outdoor">Outdoor Activities</option>
-            <option value="play">Play Dates For Kids</option>
-            <option value="study">Study Groups</option>
-            <option value="arts">Arts and Crafts</option>
-            <option value="sports">Sports</option>
-            <option value="night">Night Life</option>
-            <option value="business">Business Promotion</option>
-            <option value="garage">Garage Sales</option>
-            <option value="music">Music/Concerts</option>
-            <option value="spiritual">Spiritual Groups</option>
-          </select>
-        </div>
-        <!-- event title -->
-        <div class="input-field col s12">
-          <input id="input_text" type="text" data-length="20">
-          <label for="input_text">Zipcode</label>
-        </div>
-      </div>
-    </div>
-    <!-- submit button -->
-    <button class="btn waves-effect waves-light" type="submit" name="action">Search Events
-      <i class="material-icons right">search</i>
-    </button>
-  </form>
-</ul>
-
-
+      <!-- submit button -->
+      <button class="btn waves-effect waves-light" type="submit" name="action">Search Events
+        <i class="material-icons right">search</i>
+      </button>
+    </form>
+  </ul>
 
 
 <body class="bg">
-  <div class="container">
+  <div id="googft-mapCanvas">
     <div class="row">
       <div class="col s12">
-        <div id="google-maps">
+        <!-- <div id="googft-mapCanvas">
 
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
   <!--JavaScript at end of body for optimized loading-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script>
-    $(document).ready(function () {
-      $('.sidenav').sidenav();
-      $('#slide-out-events').sidenav({
-        edge: 'right'})
-      $('select').formSelect({
-
+      $(document).ready(function () {
+        $('.sidenav').sidenav();
+        $('#slide-out-events').sidenav({
+          edge: 'right'})
+        $('select').formSelect({
+  
+        });
+        $('input#input_text, textarea#textarea2').characterCounter();
       });
-      $('input#input_text, textarea#textarea2').characterCounter();
-    });
-  </script>
+    </script>
 </body>
 
 </html>

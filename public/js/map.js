@@ -1,5 +1,6 @@
 var map, infoWindow, pos;
 var markers = [];
+var db = require("../models");
 
 function initMap() {
     $(".clear-button").on('click', function(e) {
@@ -8,7 +9,7 @@ function initMap() {
         markers = [];
     });
 
-    map = new google.maps.Map(document.getElementById('maps'), {
+    map = new google.maps.Map(document.getElementById('.bg'), {
         center: { lat: -34.397, lng: 150.644 },
         zoom: 10
     });
@@ -47,26 +48,26 @@ function initMap() {
             url: queryURL,
             method: "GET",
         }).then(function (res) {
-            let events = res.events.map(function(event) {
+            let POI = res.POI.map(function(event) {
                 console.log(event);
                 return {
-                    title: event.name,
+                    title: POI.name,
                     animation: google.maps.Animation.DROP,
                     map: map,
-                    href: event.link,
+                    href: POI.link,
                     position: { lat: event.group.lat, lng: event.group.lng }
                 };
             })
         })
     };
 
-            let newMarkers = events.map(element => {
+            let newMarkers = POI.map(element => {
 
                 return new google.maps.Marker(element);
             });
 
             newMarkers.forEach(function (m) {
-                google.maps.event.addListener(m, 'click', function () {
+                google.maps.POI.addListener(m, 'click', function () {
                     window.location.href = this.href;
                 });
             

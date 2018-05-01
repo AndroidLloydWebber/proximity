@@ -4,7 +4,7 @@ body, html {
 
 .bg { 
     /* The image used */
-    background-image: url("../images/google-maps-background.jpg");
+    /* background-image: url("../images/google-maps-background.jpg"); */
 
     /* Full height */
     height: 100%; 
@@ -142,18 +142,14 @@ input {
 }
 
 .waves-effect  {
-    /* margin-left: 10px; */
     width: 90%;
     margin-left: 22px;
-    /* margin-right: auto; */
     text-align: center;
 
 }
 
 .waves-effect:hover {
-    /* margin-left: 10px; */
     margin-left: 22px;
-    /* margin-right: auto; */
     text-align: center;
 }
 
@@ -163,12 +159,15 @@ h4 {
     padding-bottom: 18px;
 }
 
-#search-btn {
-
+.active  {
+    color: #fff !important;
+    font-size: 20px !important;
+    line-height: 10px;
 }
 
+#input_text {
+    color: #30034c !important;
 
-
-
+}
 
 
