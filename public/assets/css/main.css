@@ -85,6 +85,12 @@ label {
     padding-left: 15px;
 }
 
+label.active {
+    color: #fff !important;
+    font-size: 20px !important;
+    line-height: 10px !important;
+}
+
 #form-header {
     color: #fff !important;
 }
@@ -119,12 +125,14 @@ input {
 }
 
 #input_text {
+    color: #30034c !important;
     border-bottom: 1px solid #ffffff;
     background-color: #fff;
     /* border-radius: 5px; */
 }
 
 #textarea2 {
+    color: #30034c !important;
     background-color: #fff;
     border-bottom: 1px solid #ffffff;
     height: 150px;
@@ -164,4 +172,6 @@ h4 {
 
 }
 
-
+.material-icons {
+    color: #41cf1a;
+}
