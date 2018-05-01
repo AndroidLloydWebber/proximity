@@ -1,5 +1,5 @@
 ## Project Title
-Project Alien
+Project Proximity
  
 ## Team Members
 Justin Rogers, Victor Hernandez, Mark Groves, TK Diallo
