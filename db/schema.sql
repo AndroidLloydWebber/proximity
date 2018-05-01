@@ -2,12 +2,7 @@ DROP DATABASE IF EXISTS proximity;
 
 CREATE DATABASE proximity;
 
-CREATE TABLE events (
-d INT NOT NULL PRIMARY KEY,
-name VARCHAR(40),
-start VARCHAR(30),
-days INT NOT NULL,
-free VARCHAR(10),
-Where VARCHAR(20),
-rental_price FLOAT
+
+CREATE TABLE POI (
+    
 );

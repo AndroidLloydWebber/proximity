@@ -35,12 +35,12 @@ html, body, #googft-mapCanvas {
       viewport.setAttribute('content', 'initial-scale=1.0, user-scalable=no');
     }
     var mapDiv = document.getElementById('googft-mapCanvas');
-    mapDiv.style.width = isMobile ? '100%' : '1679px';
-    mapDiv.style.height = isMobile ? '100%' : '830px';
+    mapDiv.style.width = isMobile ? '100%' : '100%';
+    mapDiv.style.height = isMobile ? '100%' : '100%';
     var map = new google.maps.Map(mapDiv, {
-      center: new google.maps.LatLng(19.396152925554084, -167.30385114999996),
-      zoom: 2,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      center: new google.maps.LatLng(38.775618, -100.396285),
+      zoom: 5,
+      mapTypeId: google.maps.MapTypeId.SATELLITE
     });
 
     layer = new google.maps.FusionTablesLayer({
@@ -210,16 +210,20 @@ html, body, #googft-mapCanvas {
   <!--JavaScript at end of body for optimized loading-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script>
-      $(document).ready(function () {
-        $('.sidenav').sidenav();
-        $('#slide-out-events').sidenav({
-          edge: 'right'})
-        $('select').formSelect({
-  
-        });
-        $('input#input_text, textarea#textarea2').characterCounter();
+    $(document).ready(function () {
+      $('.sidenav').sidenav();
+      $('#slide-out-events').sidenav({
+        edge: 'right'})
+      $('select').formSelect({
+
       });
-    </script>
+      $('input#input_text, textarea#textarea2').characterCounter();
+    });
+  </script>
 </body>
 
 </html>
+
+
+Add CommentCollapse 
+
