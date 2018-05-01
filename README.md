@@ -24,10 +24,13 @@ See attached photo
 	1. Community Data(enhancement) https://www.kaggle.com/census/2015-american-community-survey
 
 ## UI Framework
-	
-<img width="1092" alt="homepage" src="https://user-images.githubusercontent.com/13412644/39272870-3ae3a27a-48ab-11e8-970f-444a4c857847.png">
+<img width="1679" alt="screen shot 2018-05-01 at 6 31 19 pm" src="https://user-images.githubusercontent.com/13412644/39496791-15c78818-4d6e-11e8-9f92-8cb5d511605e.png">
 
-<img width="1088" alt="personaleventpage" src="https://user-images.githubusercontent.com/13412644/39272898-4e395680-48ab-11e8-99a9-842e757d5f06.png">
+<img width="1678" alt="screen shot 2018-05-01 at 6 34 04 pm" src="https://user-images.githubusercontent.com/13412644/39496849-5b61958a-4d6e-11e8-9131-0965ab267198.png">
+
+
+<img width="1672" alt="screen shot 2018-05-01 at 6 34 22 pm" src="https://user-images.githubusercontent.com/13412644/39496861-6501cc68-4d6e-11e8-8c11-cffe98806e5e.png">
+
 
 ## Team Responsibilities 
 
