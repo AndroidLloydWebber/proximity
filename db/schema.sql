@@ -7,6 +7,7 @@ d INT NOT NULL PRIMARY KEY,
 name VARCHAR(40),
 start VARCHAR(30),
 days INT NOT NULL,
-date_made DATE,
+free VARCHAR(10),
+Where VARCHAR(20),
 rental_price FLOAT
 );

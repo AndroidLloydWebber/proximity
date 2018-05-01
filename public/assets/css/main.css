@@ -26,7 +26,9 @@ nav {
     background-color:#30034c;
     height: 70px !important;
 }
-
+nav .nav-wrapper {
+    z-index: 2;
+ }
 nav a.sidenav-trigger {
     display: contents;
  }
