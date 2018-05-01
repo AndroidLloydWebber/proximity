@@ -4,7 +4,7 @@ body, html {
 
 .bg { 
     /* The image used */
-    background-image: url("../images/google-maps-background.jpg");
+    /* background-image: url("../images/google-maps-background.jpg"); */
 
     /* Full height */
     height: 100%; 
@@ -47,11 +47,21 @@ nav a.sidenav-trigger {
 
 button:hover {
     background-color: #30034c !important;
-    -moz-box-shadow:    inset 0 0 15px white;
-    -webkit-box-shadow: inset 0 0 15px white;
-     box-shadow:        inset 0 0 15px white;
+    -moz-box-shadow:    outset 0 0 15px white;
+    -webkit-box-shadow: outset 0 0 15px white;
+     box-shadow:        outset 0 0 15px white;
     font-size: 22px;
     margin-left: -3px;
+    
+}
+
+button.btn.search-btn:hover {
+    background-color: #30034c !important;
+    -moz-box-shadow:    outset 0 0 15px white;
+    -webkit-box-shadow: outset 0 0 15px white;
+     box-shadow:        outset 0 0 15px white;
+    font-size: 22px;
+    margin-right: 15px !important;
     
 }
 
@@ -124,18 +134,14 @@ input {
 }
 
 .waves-effect  {
-    /* margin-left: 10px; */
     width: 90%;
     margin-left: 22px;
-    /* margin-right: auto; */
     text-align: center;
 
 }
 
 .waves-effect:hover {
-    /* margin-left: 10px; */
     margin-left: 22px;
-    /* margin-right: auto; */
     text-align: center;
 }
 
@@ -145,10 +151,15 @@ h4 {
     padding-bottom: 18px;
 }
 
+.active  {
+    color: #fff !important;
+    font-size: 20px !important;
+    line-height: 10px;
+}
 
+#input_text {
+    color: #30034c !important;
 
-
-
-
+}
 
 
