@@ -40,7 +40,7 @@ html, body, #googft-mapCanvas {
     var map = new google.maps.Map(mapDiv, {
       center: new google.maps.LatLng(38.775618, -100.396285),
       zoom: 5,
-      mapTypeId: google.maps.MapTypeId.SATELLITE
+      mapTypeId: google.maps.MapTypeId.HYBRID
     });
 
     layer = new google.maps.FusionTablesLayer({
@@ -105,7 +105,7 @@ html, body, #googft-mapCanvas {
   </nav>
   <!-- create event slide out form -->
   <ul id="slide-out" class="sidenav" style="width: 500px;">
-    <form action="page where info will be submitted" id="form">
+    <form action="page where info will be submitted" id="form1">
       <div class="row">
         <div class="col-xs-12">
           <div id="form-header">
@@ -147,7 +147,7 @@ html, body, #googft-mapCanvas {
         </div>
       </div>
       <!-- submit button -->
-      <button class="btn waves-effect waves-light" type="submit" name="action">Add Event to Map
+      <button class="btn waves-effect waves-light submit-btn" type="submit" name="action">Add Event to Map
         <i class="material-icons right">place</i>
       </button>
     </form>
@@ -158,7 +158,7 @@ html, body, #googft-mapCanvas {
   <!-- search events fillout form -->
   
   <ul id="slide-out-events" class="sidenav right" style="width: 500px;">
-    <form action="page where info will be submitted" id="form">
+    <form action="page where info will be submitted" id="form2">
       <div class="row">
         <div class="col-xs-12">
           <div id="form-header">
@@ -190,7 +190,7 @@ html, body, #googft-mapCanvas {
         </div>
       </div>
       <!-- submit button -->
-      <button class="btn waves-effect waves-light" type="submit" name="action">Search Events
+      <button class="btn waves-effect waves-light submit-btn" type="submit" name="action">Search Events
         <i class="material-icons right">search</i>
       </button>
     </form>
@@ -218,12 +218,17 @@ html, body, #googft-mapCanvas {
 
       });
       $('input#input_text, textarea#textarea2').characterCounter();
+      $(".submit-btn").on("click", function(){
+        $('.sidenav').sidenav("close");
+      })
+
+      // $("form").submit(function(e){
+      //   e.preventDefault();
+      // })
     });
   </script>
 </body>
 
 </html>
 
-
-Add CommentCollapse 
 
