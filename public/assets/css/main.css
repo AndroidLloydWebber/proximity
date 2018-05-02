@@ -25,6 +25,11 @@ body, html {
 nav {
     background-color:#30034c;
     height: 70px !important;
+
+}
+
+nav .nav-wrapper {
+    z-index: 2;
 }
 
 nav a.sidenav-trigger {
@@ -163,3 +168,34 @@ h4 {
 }
 
 
+/* media queries  */
+@media screen and (max-width: 992px) {
+    nav i.material-icons {
+        display: none;
+  }
+}
+
+@media screen and (min-width: 861px) {
+    nav i.material-icons {
+        display: none;
+  }
+}
+
+
+
+
+@media screen and (max-width: 860px) {
+    i#mobile-nav-btn.material-icons {
+        display: inline;
+    }
+    #slide-out-menu-btn {
+        display: none;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    #logo {
+        height: 50px;
+        margin: 40px 0 0 50px;
+    }
+  }
