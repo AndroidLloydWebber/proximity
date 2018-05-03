@@ -76,6 +76,32 @@ html, body, #googft-mapCanvas {
   }
 
   google.maps.event.addDomListener(window, 'load', initialize);
+
+  var marker;
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 13,
+    center: {lat: 59.325, lng: 18.070}
+  });
+
+  marker = new google.maps.Marker({
+    map: map,
+    draggable: true,
+    animation: google.maps.Animation.DROP,
+    position: {lat: 59.327, lng: 18.067}
+  });
+  marker.addListener('click', toggleBounce);
+}
+
+function toggleBounce() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
+}
+
 </script>
 </head>
 
@@ -105,7 +131,7 @@ html, body, #googft-mapCanvas {
   </nav>
   <!-- create event slide out form -->
   <ul id="slide-out" class="sidenav" style="width: 500px;">
-    <form action="page where info will be submitted" id="form">
+    <form action="/api/posts" method="POST" id="event-form">
       <div class="row">
         <div class="col-xs-12">
           <div id="form-header">
@@ -147,7 +173,7 @@ html, body, #googft-mapCanvas {
         </div>
       </div>
       <!-- submit button -->
-      <button class="btn waves-effect waves-light" type="submit" name="action">Add Event to Map
+      <button class="btn waves-effect waves-light" type="submit" name="action" form="event-form">Add Event to Map
         <i class="material-icons right">place</i>
       </button>
     </form>
@@ -158,7 +184,7 @@ html, body, #googft-mapCanvas {
   <!-- search events fillout form -->
   
   <ul id="slide-out-events" class="sidenav right" style="width: 500px;">
-    <form action="page where info will be submitted" id="form">
+    <form action="/api/posts" method="POST" id="search-form">
       <div class="row">
         <div class="col-xs-12">
           <div id="form-header">
@@ -190,11 +216,12 @@ html, body, #googft-mapCanvas {
         </div>
       </div>
       <!-- submit button -->
-      <button class="btn waves-effect waves-light" type="submit" name="action">Search Events
+      <button class="btn waves-effect waves-light" type="submit" form="search-form" >Search Events
         <i class="material-icons right">search</i>
       </button>
     </form>
   </ul>
+  
 
 
 <body class="bg">
@@ -210,6 +237,7 @@ html, body, #googft-mapCanvas {
   <!--JavaScript at end of body for optimized loading-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script>
+  
     $(document).ready(function () {
       $('.sidenav').sidenav();
       $('#slide-out-events').sidenav({
