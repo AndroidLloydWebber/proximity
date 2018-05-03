@@ -8,6 +8,7 @@
 // Requiring our map model folder
 var db = require("../models");
 
+
 // Routes
 // =============================================================
 module.exports = function(app) {
@@ -30,6 +31,7 @@ module.exports = function(app) {
       }
     }).then( function ( results ) {
       res.json( results );
+      
   });
 });
 
@@ -47,42 +49,31 @@ module.exports = function(app) {
 });
 
   // POST route for saving a new post
-  app.post("/api/posts", function(req, res) {
+  app.post("/api/posts", function (req, res) {
     // Add sequelize code for creating a post using req.body,
     // then return the result using res.json
-    db.POI.saveOne({
-        where: {
-            body: req.body
-        }
-    }).then( function ( results ) {
-        res.json ( results );
+
+    var key = "AIzaSyAo3U3-CYQSA_L--3jjHzIIqBnngBiAMEU"
+    var queryURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + req.body.address + "&key=" + key;
+    axios = require('axios');
+    axios.get(queryURL).then(function (response) {
+        var locationData = response.data.results[0].geometry.location;
+        db.POI.create({
+            title: req.body.title,
+            address: req.body.address,
+            category: req.body.category,
+            body: req.body.body,
+            lat: locationData.lat,
+            lng: locationData.lng,
+        }).then(function (newPOI) {
+            res.json(newPOI);
+        })
     });
+    
 });
 
-  // DELETE route for deleting posts
-  app.delete("/api/posts/:id", function(req, res) {
-    // Add sequelize code to delete a post where the id is equal to req.params.id, 
-    // then return the result to the user using res.json
-    db.POI.delete({
-        where: {
-            id: req.params.id
-        }
-    }).then( function ( results ) {
-        res.json ( results );
-    
-    });
-});
+};
 
-  // PUT route for updating posts
-  app.put("/api/posts", function(req, res) {
-    // Add code here to update a post using the values in req.body, where the id is equal to
-    // req.body.id and return the result to the user using res.json
-    db.POI.updateOne({
-        where: {
-            id: req.body.id
-        }
-    }).then ( function ( results ) {
-        res.json ( results );
-    
-  });
-})};
+
+
+  

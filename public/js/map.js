@@ -2,6 +2,7 @@ var map, infoWindow, pos;
 var markers = [];
 var db = require("../models");
 
+
 function initMap() {
     $(".clear-button").on('click', function(e) {
         e.preventDefault();

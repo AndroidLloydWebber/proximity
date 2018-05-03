@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/AndroidLloydWebber/proximity#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "csv-mysql": "^1.0.3",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
