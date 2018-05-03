@@ -41,7 +41,7 @@ function initMap() {
 
         function geocoder(){
             var address = "955 Juniper St, Atlanta, GA, 30309";
-            var key = "AIzaSyAo3U3-CYQSA_L--3jjHzIIqBnngBiAMEU"
+            var key = "AIzaSyC05U7hyAYYT94x7mf8Iiky7ae54hUMaLo"
             var queryURL = "https://maps.googleapis.com/maps/api/geocode/json?address=1" + address + "&key=" + key;
 
         $.ajax({
