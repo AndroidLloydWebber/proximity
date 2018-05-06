@@ -16,7 +16,7 @@ module.exports = function(app) {
   // GET route for getting all of the posts
   app.get("/api/posts", function(req, res) {
     // Add sequelize code to find all posts, and return them to the user with res.json
-    db.POI.findAll({}).then( function (results ) {
+    db.poi.findAll({}).then( function (results ) {
       res.json( results );
     }) 
   });
@@ -25,7 +25,7 @@ module.exports = function(app) {
   app.get("/api/posts/category/:category", function(req, res) {
     // Add sequelize code to find all posts where the category is equal to req.params.category,
     // return the result to the user with res.json
-    db.POI.findAll({
+    db.poi.findAll({
       where: {
         category: req.params.category
       }
@@ -39,7 +39,8 @@ module.exports = function(app) {
   app.get("/api/posts/:id", function(req, res) {
     // Add sequelize code to find a single post where the id is equal to req.params.id,
     // return the result to the user with res.json
-    db.POI.selectOne({
+
+    db.poi.findOne({
         where: {
             id: req.params.id
         }
@@ -58,7 +59,7 @@ module.exports = function(app) {
     axios = require('axios');
     axios.get(queryURL).then(function (response) {
         var locationData = response.data.results[0].geometry.location;
-        db.POI.create({
+        db.poi.create({
             title: req.body.title,
             address: req.body.address,
             category: req.body.category,
