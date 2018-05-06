@@ -1,11 +1,11 @@
 ## Project Title
-Project Alien
+Project Proximity
  
 ## Team Members
 Justin Rogers, Victor Hernandez, Mark Groves, TK Diallo
  
 ## Project Description
-User submitted data centered around current events and news. Google map markers then geolocate submissions from address input to display on map in UI. Users connect to information by clicking on map markers for more details. 
+Proximity is a free website with user generated events populated all over the world. Users can also search for events near them based on zip code, and our categories.
  
 ## Sketch of Final Product
 See attached photo
@@ -24,34 +24,40 @@ See attached photo
 	1. Community Data(enhancement) https://www.kaggle.com/census/2015-american-community-survey
 
 ## UI Framework
-	
-<img width="1092" alt="homepage" src="https://user-images.githubusercontent.com/13412644/39272870-3ae3a27a-48ab-11e8-970f-444a4c857847.png">
+<img width="1679" alt="screen shot 2018-05-01 at 6 31 19 pm" src="https://user-images.githubusercontent.com/13412644/39496791-15c78818-4d6e-11e8-9f92-8cb5d511605e.png">
 
-<img width="1088" alt="personaleventpage" src="https://user-images.githubusercontent.com/13412644/39272898-4e395680-48ab-11e8-99a9-842e757d5f06.png">
+<img width="1678" alt="screen shot 2018-05-01 at 6 34 04 pm" src="https://user-images.githubusercontent.com/13412644/39496849-5b61958a-4d6e-11e8-9131-0965ab267198.png">
+
+
+<img width="1672" alt="screen shot 2018-05-01 at 6 34 22 pm" src="https://user-images.githubusercontent.com/13412644/39496861-6501cc68-4d6e-11e8-8c11-cffe98806e5e.png">
+
 
 ## Team Responsibilities 
 
 Frontend (Mark, Victor)
 Backend (JR, TK, Mark, Victor)
-## Deadlines
-Thursday - Detail Outline and sectioning of responsibilities 
-Complete frontend, create database, schema, seeds and MVC structure. Design needed tables and establish routes and server.
-Friday - Complete backend; connect databases, backend and frontend
-Monday - Deployment of site, add enhancements and start on presentation
-Tuesday  - Complete presentation and preparation
-Wednesday - Present Project
+## Concept
+User arrives on website
+
+User will see one big map, with already created events by other users
+
+User can create their own events, and add them to the map
+
+User can search for already created events, and get more info on them upon clicking them
+
 
  
-## Rough Breakdown of Tasks
-	1. HTML
-	2. CSS & Style Guide
-	3. JavaScript
-	4. API
-	5. Integration
-	6. Deployment
-	7. Demo/Presentation Preparation
-	8. API routes
-	9. MVC Paradigm folder structure
-	10. New Technology
+## Rough Breakdown of Process
+Brainstormed concepts we wanted to incorporate (create event, search event)
+
+Sketched out UI/UX designs
+
+Determined APIs that would allow us to achieve concept aspirations
+
+Acquired the necessary data from our APIs
+
+Styled, formatted, and “beautified”
+
+
 
 

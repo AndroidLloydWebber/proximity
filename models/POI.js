@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var POI = sequelize.define("POI", {
+    return  sequelize.define("poi", {
         title: DataTypes.STRING,
         address: DataTypes.STRING,
         lat: DataTypes.DECIMAL(9,6),
@@ -7,6 +7,7 @@ module.exports = function (sequelize, DataTypes) {
         link: DataTypes.STRING,
         category: DataTypes.STRING,
         body: DataTypes.TEXT
+    }, {
+        tableName: 'poi'
     });
-    return POI;
 };

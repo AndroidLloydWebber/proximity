@@ -1,20 +1,19 @@
-body, html {
-    height: 100%;
+body,
+html {
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
-.bg { 
-    /* The image used */
-    /* background-image: url("../images/google-maps-background.jpg"); */
-
-    /* Full height */
-    height: 100%; 
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+#googft-mapCanvas {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
 }
-
 /* header */
 
 #logo {
@@ -23,15 +22,19 @@ body, html {
 }
 
 nav {
-    background-color:#30034c;
-    height: 70px !important;
+ 
+    
 }
+
 nav .nav-wrapper {
-    z-index: 2;
- }
+    background-color: #30034c;
+    height: 70px !important;
+    z-index: 2 !important;
+}
+
 nav a.sidenav-trigger {
     display: contents;
- }
+}
 
 #nav-mobile {
     margin-left: 20px;
@@ -49,40 +52,49 @@ nav a.sidenav-trigger {
 
 button:hover {
     background-color: #30034c !important;
-    -moz-box-shadow:    outset 0 0 15px white;
+    -moz-box-shadow: outset 0 0 15px white;
     -webkit-box-shadow: outset 0 0 15px white;
-     box-shadow:        outset 0 0 15px white;
+    box-shadow: outset 0 0 15px white;
     font-size: 22px;
-    margin-left: -3px;
-    
+    margin-left: -8px;
 }
 
 button.btn.search-btn:hover {
     background-color: #30034c !important;
-    -moz-box-shadow:    outset 0 0 15px white;
+    -moz-box-shadow: outset 0 0 15px white;
     -webkit-box-shadow: outset 0 0 15px white;
-     box-shadow:        outset 0 0 15px white;
+    box-shadow: outset 0 0 15px white;
     font-size: 22px;
-    margin-right: 15px !important;
-    
+    margin-right: 13px !important;
 }
 
 .btn:hover {
-    -moz-box-shadow:     0 0 15px white;
-    -webkit-box-shadow:  0 0 15px white;
-     box-shadow:         0 0 15px white;
+    -moz-box-shadow: 0 0 15px white;
+    -webkit-box-shadow: 0 0 15px white;
+    box-shadow: 0 0 15px white;
 }
 
 .sidenav {
     /* width: 470px !important; */
     background-color: #30034c;
-    
-    
 }
 
 label {
     color: #30034c !important;
     padding-left: 15px;
+}
+
+#zip {
+    color: #30034c !important;
+    padding-left: 15px;
+    position: absolute;
+    top: -12px !important;
+}
+
+label.active {
+    color: #fff !important;
+    font-size: 20px !important;
+    line-height: 10px !important;
 }
 
 #form-header {
@@ -93,53 +105,52 @@ span {
     color: #30034c !important;
 }
 
-input {
-    color: #fff !important;
-    border-bottom: 1px solid #ffffff;
-    background-color: #fff;
-    /* border-radius: 5px; */
-}
-
 .select-wrapper input.select-dropdown:focus {
     border-bottom: 1px solid #ffffff;
     background-color: #fff;
     /* border-radius: 5px; */
 }
 
-.select-wrapper {
+/* .select-wrapper {
     padding-left: 10px;
     background-color: #fff;
     color: #30034c !important;
-    /* border-radius: 5px; */
-}
+} */
 
 .select-wrapper input.select-dropdown {
     color: #30034c !important;
     margin-bottom: 28px;
 }
 
-#input_text {
+input {
+    color: #30034c !important;
     border-bottom: 1px solid #ffffff;
-    background-color: #fff;
-    /* border-radius: 5px; */
+    background-color: #fff !important;
 }
 
-#textarea2 {
+textarea.materialize-textarea {
+    color: #30034c !important;
     background-color: #fff;
     border-bottom: 1px solid #ffffff;
     height: 150px;
-    /* border-radius: 5px; */
 }
+
+/* #textarea2 {
+    color: #30034c !important;
+    background-color: #fff;
+    border-bottom: 1px solid #ffffff;
+    height: 150px; */
+    /* border-radius: 5px;
+} */
 
 .row {
     height: 500px;
 }
 
-.waves-effect  {
+.waves-effect {
     width: 90%;
     margin-left: 22px;
     text-align: center;
-
 }
 
 .waves-effect:hover {
@@ -153,7 +164,7 @@ h4 {
     padding-bottom: 18px;
 }
 
-.active  {
+.active {
     color: #fff !important;
     font-size: 20px !important;
     line-height: 10px;
@@ -161,7 +172,8 @@ h4 {
 
 #input_text {
     color: #30034c !important;
-
 }
 
-
+.material-icons {
+    color: #41cf1a;
+}
