@@ -27,6 +27,7 @@
     "sequelize": "^4.37.6"
   },
   "devDependencies": {
+    "dotenv": "^5.0.1",
     "nodemon": "^1.17.3"
   }
 }
